@@ -280,7 +280,11 @@ public class Calculator extends JFrame implements ActionListener {
         operateValidFlag = true;  
     }  
   
-  
+    /** 
+     * 从结果文本框中获取数字 
+     *  
+     * @return 
+     */  
     private double getNumberFromText() {  
         double result = 0;  
         try {  
