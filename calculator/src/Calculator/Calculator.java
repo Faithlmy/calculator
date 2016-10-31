@@ -1,16 +1,12 @@
 package Calculator;
 
-import java.awt.BorderLayout;
-import java.awt.Color;  
-import java.awt.GridLayout;  
-import java.awt.event.ActionEvent;  
-import java.awt.event.ActionListener;  
-  
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.JButton;  
-import javax.swing.JFrame;  
-import javax.swing.JPanel;  
-import javax.swing.JTextField;  
+import javax.swing.*;
+
+ 
   
 /* 
  * 一个计算器，与Windows附件自带计算器的标准版功能、界面相仿。 但还不支持键盘操作。 
@@ -293,5 +289,7 @@ public class Calculator extends JFrame implements ActionListener {
         Calculator calculator1 = new Calculator();  
         calculator1.setVisible(true);  
         calculator1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
-    }  
+    }
+
+  
 }  
