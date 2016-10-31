@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;  
 import javax.swing.JTextField;  
   
-/** 
+/* 
  * 一个计算器，与Windows附件自带计算器的标准版功能、界面相仿。 但还不支持键盘操作。 
  */  
 public class Calculator extends JFrame implements ActionListener {  
@@ -216,8 +216,7 @@ public class Calculator extends JFrame implements ActionListener {
     }  
   
     /** 
-     * 处理运算符键被按下的事件 
-     *  
+     * 处理运算符键被按下的事件  
      * @param key 
      */  
     private void handleOperator(String key) {  
@@ -280,11 +279,7 @@ public class Calculator extends JFrame implements ActionListener {
         operateValidFlag = true;  
     }  
   
-    /** 
-     * 从结果文本框中获取数字 
-     *  
-     * @return 
-     */  
+ 
     private double getNumberFromText() {  
         double result = 0;  
         try {  
