@@ -65,7 +65,7 @@ public class Calculator extends JFrame implements ActionListener {
         resultText.setBackground(Color.white);  
   
         // 初始化计算器上键的按钮，将键放在一个画板内  
-        JPanel calckeysPanel = new JPanel();  
+       JPanel calckeysPanel = new JPanel();  
         // 用网格布局器，4行，5列的网格，网格之间的水平方向间隔为3个象素，垂直方向间隔为3个象素  
         calckeysPanel.setLayout(new GridLayout(4, 5, 3, 3));  
         for (int i = 0; i < KEYS.length; i++) {  
@@ -78,7 +78,7 @@ public class Calculator extends JFrame implements ActionListener {
         keys[8].setForeground(Color.red);  
         keys[13].setForeground(Color.red);  
         keys[18].setForeground(Color.red);  
-        keys[19].setForeground(Color.red);  
+        keys[19].setForeground(Color.red); 
   
         // 初始化功能键，都用红色标示。将功能键放在一个画板内  
         JPanel commandsPanel = new JPanel();  
