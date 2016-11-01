@@ -6,8 +6,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
- 
-  
 /* 
  * 一个计算器，与Windows附件自带计算器的标准版功能、界面相仿。 但还不支持键盘操作。 
  */  
