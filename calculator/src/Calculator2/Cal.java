@@ -54,7 +54,7 @@ public class Cal extends JFrame {
         } 
     	
     	this.setTitle("¼ÆËãÆ÷");
-    	this.setSize(600, 600);
+    	this.setSize(800, 800);
 		this.setLocation(200, 200);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
