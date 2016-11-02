@@ -91,7 +91,7 @@ public class Cal extends JFrame {
         getContentPane().add("West", calmsPanel);  
     	
     	this.setTitle("¼ÆËãÆ÷");
-    	this.setSize(400, 200);
+    	this.setSize(400, 500);
 		this.setLocation(300, 300);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
