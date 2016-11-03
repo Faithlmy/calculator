@@ -8,6 +8,13 @@ import javax.swing.*;
 
 public class lx extends JFrame{
 	
+	public static void main(String[] args) {
+		
+		lx lx1 = new lx();
+	}
+
+	
+	
 	//定义组件
 	JButton jb1, jb2, jb3, jb4, jb5;
 	//构造函数
@@ -39,9 +46,5 @@ public class lx extends JFrame{
 		
 	}
 	
-	public static void main(String[] args) {
-		
-		lx lx1 = new lx();
-	}
 
 }
