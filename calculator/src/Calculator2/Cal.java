@@ -1,13 +1,15 @@
 package Calculator2;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
 
 
 
-public class Cal extends JFrame {
+public class Cal extends JFrame implements ActionListener{
 	
 	
 	public static void main(String  args[])
@@ -91,14 +93,31 @@ public class Cal extends JFrame {
         getContentPane().add("West", calmsPanel);  
     	
     	this.setTitle("计算器");
-    	this.setSize(400, 500);
-    	this.setSize(400, 500);
+    	this.setSize(300, 200);
 		this.setLocation(300, 300);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
     	this.setVisible(true);
+    	
+    	
+    	
+        // 都使用同一个事件侦听器，即本对象。本类的声明中有implements ActionListener  
+        for (int i = 0; i < KEYS.length; i++) {  
+            keys[i].addActionListener((ActionListener) this);  
+        }  
+        for (int i = 0; i < COMMAND.length; i++) {  
+            commands[i].addActionListener(this);  
+        }  
+        for (int i = 0; i < M.length; i++) {  
+            m[i].addActionListener(this);  
+        }
 
     }
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 
 
 
