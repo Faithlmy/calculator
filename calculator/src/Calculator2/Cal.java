@@ -32,7 +32,15 @@ public class Cal extends JFrame implements ActionListener{
     private JButton commands[] = new JButton[COMMAND.length];  
     private JButton m[] = new JButton[M.length];  
     private JTextField resultText = new JTextField("0"); 
-	
+    // 标志用户按的是否是整个表达式的第一个数字,或者是运算符后的第一个数字  
+    private boolean firstDigit = true;  
+    // 计算的中间结果。  
+    private double resultNum = 0.0;  
+    // 当前运算的运算符  
+    private String operator = "=";  
+    // 操作是否合法  
+    private boolean operateValidFlag = true;  
+  
 
 
    /*构造函数*/
@@ -87,13 +95,13 @@ public class Cal extends JFrame implements ActionListener{
         top.setLayout(new BorderLayout());  
         top.add("Center", resultText);  
         // 整体布局  
-        getContentPane().setLayout(new BorderLayout(3, 3));  
+        getContentPane().setLayout(new BorderLayout(3, 5));  
         getContentPane().add("North", top);  
         getContentPane().add("Center", panel1);  
         getContentPane().add("West", calmsPanel);  
     	
     	this.setTitle("计算器");
-    	this.setSize(300, 200);
+    	this.setSize(355, 200);
 		this.setLocation(300, 300);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -139,13 +147,13 @@ public class Cal extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		 if (firstDigit) {  
 	            // 输入的第一个数字  
-	            resultText.setText(key);  
-	        } else if ((key.equals(".")) && (resultText.getText().indexOf(".") < 0)) {  
+	            resultText.setText(label);  
+	        } else if ((KEYS.equals(".")) && (resultText.getText().indexOf(".") < 0)) {  
 	            // 输入的是小数点，并且之前没有小数点，则将小数点附在结果文本框的后面  
 	            resultText.setText(resultText.getText() + ".");  
-	        } else if (!key.equals(".")) {  
+	        } else if (!KEYS.equals(".")) {  
 	            // 如果输入的不是小数点，则将数字附在结果文本框的后面  
-	            resultText.setText(resultText.getText() + key);  
+	            resultText.setText(resultText.getText() + KEYS);  
 	        }  
 	        // 以后输入的肯定不是第一个数字了  
 	        firstDigit = false;  
@@ -177,7 +185,75 @@ public class Cal extends JFrame implements ActionListener{
 		
 	}  
 
-
+	 private void handleOperator(String key) {  
+	        if (operator.equals("/")) {  
+	            // 除法运算  
+	            // 如果当前结果文本框中的值等于0  
+	            if (getNumberFromText() == 0.0) {  
+	                // 操作不合法  
+	                operateValidFlag = false;  
+	                resultText.setText("除数不能为零");  
+	            } else {  
+	                resultNum /= getNumberFromText();  
+	            }  
+	        } else if (operator.equals("1/x")) {  
+	            // 倒数运算  
+	            if (resultNum == 0.0) {  
+	                // 操作不合法  
+	                operateValidFlag = false;  
+	                resultText.setText("零没有倒数");  
+	            } else {  
+	                resultNum = 1 / resultNum;  
+	            }  
+	        } else if (operator.equals("+")) {  
+	            // 加法运算  
+	            resultNum += getNumberFromText();  
+	        } else if (operator.equals("-")) {  
+	            // 减法运算  
+	            resultNum -= getNumberFromText();  
+	        } else if (operator.equals("*")) {  
+	            // 乘法运算  
+	            resultNum *= getNumberFromText();  
+	        } else if (operator.equals("sqrt")) {  
+	            // 平方根运算  
+	            resultNum = Math.sqrt(resultNum);  
+	        } else if (operator.equals("%")) {  
+	            // 百分号运算，除以100  
+	            resultNum = resultNum / 100;  
+	        } else if (operator.equals("+/-")) {  
+	            // 正数负数运算  
+	            resultNum = resultNum * (-1);  
+	        } else if (operator.equals("=")) {  
+	            // 赋值运算  
+	            resultNum = getNumberFromText();  
+	        }  
+	        if (operateValidFlag) {  
+	            // 双精度浮点数的运算  
+	            long t1;  
+	            double t2;  
+	            t1 = (long) resultNum;  
+	            t2 = resultNum - t1;  
+	            if (t2 == 0) {  
+	                resultText.setText(String.valueOf(t1));  
+	            } else {  
+	                resultText.setText(String.valueOf(resultNum));  
+	            }  
+	        }  
+	        // 运算符等于用户按的按钮  
+	        operator = key;  
+	        firstDigit = true;  
+	        operateValidFlag = true;  
+	    }  
+	  
+	 
+	    private double getNumberFromText() {  
+	        double result = 0;  
+	        try {  
+	            result = Double.valueOf(resultText.getText()).doubleValue();  
+	        } catch (NumberFormatException e) {  
+	        }  
+	        return result;  
+	    }  
 
 
 
