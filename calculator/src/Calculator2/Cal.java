@@ -16,8 +16,6 @@ public class Cal extends JFrame implements ActionListener{
 		Cal cal = new Cal();
 	}
 	
-	
-	
     /** 计算器上的键的显示名字 */  
     private final String[] KEYS = { "7", "8", "9", "/", "sqrt", "4", "5", "6",  
             "*", "%", "1", "2", "3", "-", "1/x", "0", "+/-", ".", "+", "=" };  
