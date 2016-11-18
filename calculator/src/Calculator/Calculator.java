@@ -131,7 +131,6 @@ public class Calculator extends JFrame implements ActionListener {
             m[i].addActionListener(this);  
         }  
     }  
-  
     /** 
      * 处理事件 
      */  
