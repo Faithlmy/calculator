@@ -102,7 +102,6 @@ public class Calculator extends JFrame implements ActionListener {
   
         // 下面进行计算器的整体布局，将calckeys和command画板放在计算器的中部，  
         // 将文本框放在北部，将calms画板放在计算器的西部。  
-  
         // 新建一个大的画板，将上面建立的command和calckeys画板放在该画板内  
         JPanel panel1 = new JPanel();  
         // 画板采用边界布局管理器，画板里组件之间的水平和垂直方向上间隔都为3象素  
