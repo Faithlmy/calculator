@@ -37,7 +37,7 @@ public class lx extends JFrame{
 		
 		//设置窗体属性
 		this.setTitle("布局");
-		this.setSize(300, 400);
+		this.setSize(500, 400);
 		this.setLocation(200, 200);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		

@@ -29,7 +29,7 @@ public class Calculator extends JFrame implements ActionListener {
     // 标志用户按的是否是整个表达式的第一个数字,或者是运算符后的第一个数字  
     private boolean firstDigit = true;  
     // 计算的中间结果。  
-    private double resultNum = 1.0;  
+    private double resultNum = 4.0;  
     // 当前运算的运算符  
     private String operator = "=";  
     // 操作是否合法  
