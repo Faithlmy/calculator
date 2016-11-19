@@ -35,7 +35,7 @@ public class Calculator extends JFrame implements ActionListener {
     // 操作是否合法  
     private boolean operateValidFlag = true;  
   
-    /** 
+    /*
      * 构造函数 
      */  
     public Calculator() {  
