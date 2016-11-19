@@ -12,9 +12,6 @@ public class lx extends JFrame{
 		
 		lx lx1 = new lx();
 	}
-
-	
-	
 	//定义组件
 	JButton jb1, jb2, jb3, jb4, jb5;
 	//构造函数
