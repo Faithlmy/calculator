@@ -40,9 +40,6 @@ public class lx extends JFrame{
 		//œ‘ æ¥∞ÃÂ
 		this.setVisible(true);
 		
-		
-		
 	}
 	
-
 }
