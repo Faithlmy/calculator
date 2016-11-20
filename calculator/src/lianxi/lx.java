@@ -1,5 +1,4 @@
 /*“≥√Ê≤ºæ÷¡∑œ∞*/
-
 package lianxi;
 import java.awt.*;
 import javax.swing.*;
