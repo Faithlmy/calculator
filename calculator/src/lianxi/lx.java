@@ -33,7 +33,7 @@ public class lx extends JFrame{
 		this.setLocation(200, 200);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		//显示窗体
+		//显示  窗体
 		this.setVisible(true);
 		
 	}
