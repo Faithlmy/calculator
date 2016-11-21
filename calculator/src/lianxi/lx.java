@@ -27,7 +27,7 @@ public class lx extends JFrame{
 		this.add(jb4, BorderLayout.SOUTH);
 		this.add(jb5, BorderLayout.NORTH);
 
-		//设置窗体属性
+		//设置窗 体属性
 		this.setTitle("布局");
 		this.setSize(500, 400);
 		this.setLocation(200, 200);
