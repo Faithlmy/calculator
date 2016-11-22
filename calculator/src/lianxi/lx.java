@@ -22,7 +22,7 @@ public class lx extends JFrame{
 		jb5 = new JButton("北");
 		
 		
-		//添 加组件
+		//添 加 组件
 		this.add(jb1, BorderLayout.CENTER);
 		this.add(jb2, BorderLayout.EAST);
 		this.add(jb3, BorderLayout.WEST);
